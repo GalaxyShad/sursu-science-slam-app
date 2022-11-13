@@ -10,7 +10,7 @@ import BottomNavigation from "../components/BottomNavigation";
 
 import ScheduleItem from "../components/ScheduleItem";
 
-export default Schedule = () => {
+export default Schedule = ({navigation}) => {
   return (
     <Wrapper>
       <PageTitle>Расписание</PageTitle>
@@ -70,9 +70,7 @@ export default Schedule = () => {
         />
 
       </ScrollView>
-      
-      
-      <BottomNavigation/>
+      <BottomNavigation navigation={navigation}/>
     </Wrapper>
   )
 }

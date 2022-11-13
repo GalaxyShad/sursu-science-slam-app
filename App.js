@@ -2,6 +2,10 @@ import React from 'react';
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
 import { LoaderScreen, Colors } from 'react-native-ui-lib';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+
+const Stack = createStackNavigator();
 
 import { useFonts } from 'expo-font';
 
@@ -9,6 +13,7 @@ import Intro from './src/screens/Intro';
 import Login from './src/screens/Login';
 import Registration from './src/screens/Registration';
 import Schedule from './src/screens/Schedule';
+import Voting from './src/screens/Voting';
 
 export default () => {
   const [fontsLoaded] = useFonts({
@@ -28,6 +33,15 @@ export default () => {
   }
 
   return (
-    <Schedule/>
+    <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen name="Intro" component={Intro} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Registration" component={Registration} />
+      <Stack.Screen name="Schedule" component={Schedule} />
+      <Stack.Screen name="Voting" component={Voting} />
+
+    </Stack.Navigator>
+    </NavigationContainer>
   )
 };

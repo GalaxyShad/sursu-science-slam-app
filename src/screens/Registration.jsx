@@ -10,7 +10,7 @@ import UserTypeSwitch from "../components/UserTypeSwitch";
 
 import { useState } from "react";
 
-export default Registration = () => {
+export default Registration = ({navigation}) => {
   const SpeakerSection = () => {
     return (
       <>
@@ -40,7 +40,7 @@ export default Registration = () => {
       </ScrollView>
 
       <View style={{marginTop: 'auto'}}>
-        <CustomButton>Зарегистрироваться</CustomButton>
+        <CustomButton onClick={() => navigation.navigate('Registration')}>Зарегистрироваться</CustomButton>
       </View>
     </Wrapper>
   )

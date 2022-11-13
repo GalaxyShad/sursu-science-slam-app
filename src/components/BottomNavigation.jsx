@@ -5,11 +5,11 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 import { Feather } from '@expo/vector-icons'; 
 
-export default BottomNavigation = () => {
+export default BottomNavigation = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <MaterialIcons name="schedule" size={40} color="#FFFFFF42" />
-      <MaterialCommunityIcons name="account-star" size={40} color="#FFFFFF42" />
+      <MaterialIcons name="schedule" size={40} color="#FFFFFF42" onPress={() => navigation.navigate('Schedule')}/>
+      <MaterialCommunityIcons name="account-star" size={40} color="#FFFFFF42" onPress={() => navigation.navigate('Voting')}/>
       <Feather name="more-horizontal" size={40} color="#FFFFFF42" />
     </View>
   )

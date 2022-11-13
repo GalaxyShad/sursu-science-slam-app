@@ -7,7 +7,7 @@ import PageTitle from "../components/PageTitle";
 import CustomButton from "../components/CustomButton";
 import CustomInput from "../components/CustomInput";
 
-export default Login = () => {
+export default Login = ({navigation}) => {
   return (
     <Wrapper>
       <PageTitle>Вход</PageTitle>
@@ -19,7 +19,7 @@ export default Login = () => {
           <CustomInput label='Пароль'>Введите Пароль</CustomInput>
         </View>
 
-        <CustomButton>Войти</CustomButton>
+        <CustomButton onClick={() => navigation.navigate('Schedule')}>Войти</CustomButton>
       </View>
     </Wrapper>
   )

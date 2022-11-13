@@ -23,7 +23,6 @@ export default ScheduleItem = ({ time, content }) => {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
     flexDirection: "row",
     alignItems: "flex-start",
     marginBottom: 8,
